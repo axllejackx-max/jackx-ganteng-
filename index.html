@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>💗 untuk indli - special edition 💗</title>
+    <title>untuk indli - elegant edition</title>
     <style>
-        /* ========== 1. RESET DAN VARIABEL GLOBAL ========== */
+        /* ========== 1. RESET & VARIABEL ========== */
         * {
             margin: 0;
             padding: 0;
@@ -13,553 +13,258 @@
         }
 
         :root {
-            --pink-1: #ffb6c1;
-            --pink-2: #ffa5b9;
-            --pink-3: #ff94b1;
-            --pink-4: #ff83a9;
-            --pink-5: #ff72a1;
-            --pink-6: #ff6199;
-            --pink-7: #ff5091;
-            --pink-8: #ff3f89;
-            --pink-9: #ff2e81;
-            --pink-10: #ff1d79;
+            --pink-soft: #ffe4ec;
+            --pink-light: #ffd0dd;
+            --pink-medium: #ffb6c1;
+            --pink-dark: #ff8da1;
+            --pink-deep: #ff6b8b;
             --white: #ffffff;
-            --black: #000000;
-            --shadow-dark: rgba(0, 0, 0, 0.3);
-            --shadow-pink: rgba(255, 20, 100, 0.5);
-            --glow-pink: #ffb6c1;
-            --glow-hotpink: #ff4d6d;
+            --shadow: rgba(255, 105, 180, 0.3);
         }
 
         body {
-            font-family: 'Poppins', 'Segoe UI', 'Arial', system-ui, sans-serif;
-            background: var(--pink-1);
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: var(--pink-soft);
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 15px;
+            padding: 20px;
             position: relative;
             overflow-x: hidden;
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
-        /* ========== 2. BACKGROUND SUPER KOMPLEKS ========== */
-        .bg-layer-1 {
+        /* ========== 2. BACKGROUND LEMBUT ========== */
+        .bg-gradient {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(
-                45deg,
-                var(--pink-1) 0%,
-                var(--pink-2) 10%,
-                var(--pink-3) 20%,
-                var(--pink-4) 30%,
-                var(--pink-5) 40%,
-                var(--pink-6) 50%,
-                var(--pink-7) 60%,
-                var(--pink-8) 70%,
-                var(--pink-9) 80%,
-                var(--pink-10) 90%,
-                var(--pink-1) 100%
-            );
-            background-size: 400% 400%;
-            animation: bgComplex 25s ease infinite;
-            z-index: -10;
+            background: linear-gradient(145deg, #ffe4ec, #ffd0dd, #ffe4ec);
+            background-size: 300% 300%;
+            animation: bgPelan 20s ease infinite;
+            z-index: -2;
         }
 
-        @keyframes bgComplex {
+        @keyframes bgPelan {
             0% { background-position: 0% 0%; }
-            12.5% { background-position: 25% 25%; }
-            25% { background-position: 50% 50%; }
-            37.5% { background-position: 75% 75%; }
             50% { background-position: 100% 100%; }
-            62.5% { background-position: 75% 75%; }
-            75% { background-position: 50% 50%; }
-            87.5% { background-position: 25% 25%; }
             100% { background-position: 0% 0%; }
         }
 
-        .bg-layer-2 {
+        .bg-overlay {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at 10% 10%, rgba(255, 255, 255, 0.3) 0%, transparent 30%),
-                        radial-gradient(circle at 90% 20%, rgba(255, 200, 220, 0.4) 0%, transparent 35%),
-                        radial-gradient(circle at 30% 80%, rgba(255, 150, 180, 0.3) 0%, transparent 40%),
-                        radial-gradient(circle at 70% 60%, rgba(255, 100, 150, 0.3) 0%, transparent 45%),
-                        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.2) 0%, transparent 50%);
-            animation: glowShift 20s infinite alternate;
-            z-index: -9;
-        }
-
-        @keyframes glowShift {
-            0% { opacity: 0.3; transform: scale(1); }
-            25% { opacity: 0.5; transform: scale(1.05); }
-            50% { opacity: 0.7; transform: scale(1.1); }
-            75% { opacity: 0.5; transform: scale(1.05); }
-            100% { opacity: 0.3; transform: scale(1); }
-        }
-
-        .bg-layer-3 {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: repeating-linear-gradient(
-                45deg,
-                rgba(255, 255, 255, 0.02) 0px,
-                rgba(255, 255, 255, 0.02) 20px,
-                rgba(255, 200, 220, 0.02) 20px,
-                rgba(255, 200, 220, 0.02) 40px
-            );
+            background: radial-gradient(circle at 30% 40%, rgba(255, 255, 255, 0.3) 0%, transparent 40%),
+                        radial-gradient(circle at 70% 60%, rgba(255, 200, 220, 0.2) 0%, transparent 50%);
             pointer-events: none;
-            z-index: -8;
+            z-index: -1;
         }
 
-        /* ========== 3. PARTIKEL SUPER LENGKAP ========== */
-        .particle-factory {
+        /* ========== 3. PARTIKEL MINIMALIS ========== (HANYA 2 JENIS, GERAK PELAN) */
+        .particle-container {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             pointer-events: none;
-            z-index: -7;
+            z-index: -1;
         }
 
-        /* Partikel tipe 1 - bintang kecil */
+        .particle-heart {
+            position: absolute;
+            color: rgba(255, 182, 193, 0.4);
+            font-size: 24px;
+            animation: floatLambat 18s infinite linear;
+        }
+
+        @keyframes floatLambat {
+            0% { transform: translateY(100vh) translateX(0) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.5; }
+            90% { opacity: 0.5; }
+            100% { transform: translateY(-20vh) translateX(50px) rotate(360deg); opacity: 0; }
+        }
+
         .particle-star {
             position: absolute;
             width: 4px;
             height: 4px;
-            background: white;
-            border-radius: 50%;
-            box-shadow: 0 0 15px white, 0 0 30px var(--glow-pink);
-            animation: starFloat 8s infinite;
-        }
-
-        @keyframes starFloat {
-            0% { transform: translateY(100vh) scale(0.2); opacity: 0; }
-            15% { opacity: 1; }
-            85% { opacity: 1; }
-            100% { transform: translateY(-20vh) scale(1.2); opacity: 0; }
-        }
-
-        /* Partikel tipe 2 - hati klasik */
-        .particle-heart {
-            position: absolute;
-            font-size: 24px;
-            filter: drop-shadow(0 0 15px var(--glow-hotpink));
-            animation: heartFloat 10s infinite;
-        }
-
-        @keyframes heartFloat {
-            0% { transform: translateY(100vh) rotate(0deg) scale(0.3); opacity: 0; }
-            20% { opacity: 0.9; }
-            80% { opacity: 0.9; }
-            100% { transform: translateY(-25vh) rotate(720deg) scale(1.5); opacity: 0; }
-        }
-
-        /* Partikel tipe 3 - bintang besar */
-        .particle-bigstar {
-            position: absolute;
-            color: gold;
-            font-size: 28px;
-            filter: drop-shadow(0 0 20px #ffd700);
-            animation: bigstarFloat 12s infinite;
-        }
-
-        @keyframes bigstarFloat {
-            0% { transform: translateY(100vh) scale(0.4) rotate(0deg); opacity: 0; }
-            25% { opacity: 0.8; }
-            75% { opacity: 0.8; }
-            100% { transform: translateY(-30vh) scale(1.3) rotate(360deg); opacity: 0; }
-        }
-
-        /* Partikel tipe 4 - kelopak bunga */
-        .particle-petal {
-            position: absolute;
-            color: #ffa5b9;
-            font-size: 22px;
-            filter: drop-shadow(0 0 10px #ffb6c1);
-            animation: petalFloat 14s infinite;
-        }
-
-        @keyframes petalFloat {
-            0% { transform: translateY(100vh) translateX(0) rotate(0deg); opacity: 0; }
-            30% { opacity: 0.7; }
-            70% { opacity: 0.7; }
-            100% { transform: translateY(-35vh) translateX(100px) rotate(540deg); opacity: 0; }
-        }
-
-        /* Partikel tipe 5 - gelembung */
-        .particle-bubble {
-            position: absolute;
-            width: 10px;
-            height: 10px;
             background: rgba(255, 255, 255, 0.4);
             border-radius: 50%;
-            border: 2px solid rgba(255, 255, 255, 0.6);
-            box-shadow: 0 0 20px white;
-            animation: bubbleFloat 9s infinite;
+            box-shadow: 0 0 15px rgba(255, 182, 193, 0.5);
+            animation: starLambat 22s infinite ease-in-out;
         }
 
-        @keyframes bubbleFloat {
-            0% { transform: translateY(100vh) scale(0.5); opacity: 0; }
-            20% { opacity: 0.6; }
-            80% { opacity: 0.6; }
-            100% { transform: translateY(-20vh) scale(1.2); opacity: 0; }
+        @keyframes starLambat {
+            0% { transform: translateY(100vh) scale(0.2); opacity: 0; }
+            20% { opacity: 0.4; }
+            80% { opacity: 0.4; }
+            100% { transform: translateY(-20vh) scale(1); opacity: 0; }
         }
 
-        /* ========== 4. DEKORASI LINGKARAN CAHAYA ========== */
-        .glow-circle-1 {
-            position: fixed;
-            width: 400px;
-            height: 400px;
-            border-radius: 50%;
-            background: radial-gradient(circle, var(--glow-pink), transparent);
-            filter: blur(100px);
-            top: -100px;
-            left: -100px;
-            animation: circleMove1 18s infinite alternate;
-            z-index: -6;
-        }
-
-        .glow-circle-2 {
-            position: fixed;
-            width: 500px;
-            height: 500px;
-            border-radius: 50%;
-            background: radial-gradient(circle, var(--glow-hotpink), transparent);
-            filter: blur(120px);
-            bottom: -150px;
-            right: -150px;
-            animation: circleMove2 22s infinite alternate;
-            z-index: -6;
-        }
-
-        .glow-circle-3 {
-            position: fixed;
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            background: radial-gradient(circle, #ff8da1, transparent);
-            filter: blur(80px);
-            top: 50%;
-            left: 20%;
-            animation: circleMove3 15s infinite alternate;
-            z-index: -6;
-        }
-
-        @keyframes circleMove1 {
-            0% { transform: translate(0, 0) scale(1); }
-            100% { transform: translate(200px, 200px) scale(1.5); }
-        }
-
-        @keyframes circleMove2 {
-            0% { transform: translate(0, 0) scale(1); }
-            100% { transform: translate(-200px, -200px) scale(1.8); }
-        }
-
-        @keyframes circleMove3 {
-            0% { transform: translate(0, 0) scale(1); opacity: 0.5; }
-            100% { transform: translate(150px, -150px) scale(1.6); opacity: 0.8; }
-        }
-
-        /* ========== 5. KONTENER UTAMA (MULTI LAYER) ========== */
-        .main-wrapper {
-            max-width: 1100px;
+        /* ========== 4. KONTENER UTAMA (ELEGAN) ========== */
+        .container {
+            max-width: 950px;
             width: 100%;
-            position: relative;
-            z-index: 10;
+            background: rgba(255, 250, 250, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 60px;
+            padding: 45px;
+            box-shadow: 0 30px 60px rgba(255, 105, 180, 0.2),
+                        0 0 0 2px rgba(255, 255, 255, 0.8) inset,
+                        0 0 40px rgba(255, 182, 193, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.9);
+            transition: box-shadow 0.5s;
         }
 
-        .container-outer {
-            background: rgba(255, 240, 250, 0.15);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-radius: 90px 90px 60px 60px;
-            padding: 15px;
-            border: 5px solid rgba(255, 255, 255, 0.7);
-            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3) inset,
-                        0 30px 70px rgba(255, 0, 100, 0.5),
-                        0 0 100px var(--glow-pink);
-            animation: outerGlow 6s infinite alternate;
+        .container:hover {
+            box-shadow: 0 40px 80px rgba(255, 105, 180, 0.3),
+                        0 0 0 3px rgba(255, 255, 255, 0.9) inset,
+                        0 0 60px rgba(255, 182, 193, 0.4);
         }
 
-        @keyframes outerGlow {
-            0% { box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3) inset, 0 30px 70px rgba(255, 0, 100, 0.5), 0 0 80px var(--glow-pink); }
-            50% { box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.5) inset, 0 40px 90px #ff4d6d, 0 0 120px #ff8da1; }
-            100% { box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.4) inset, 0 35px 80px rgba(255, 20, 120, 0.6), 0 0 150px var(--glow-hotpink); }
-        }
-
-        .container-inner {
-            background: rgba(255, 245, 250, 0.25);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            border-radius: 80px 80px 50px 50px;
-            padding: 45px 35px;
-            border: 4px solid white;
-            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.6) inset;
-        }
-
-        /* ========== 6. HEADER MEWAH ========== */
-        .header-section {
+        /* ========== 5. HEADER ========== */
+        .header {
             text-align: center;
-            margin-bottom: 35px;
-            position: relative;
+            margin-bottom: 30px;
+            font-family: 'Times New Roman', serif;
         }
 
-        .main-title {
-            font-size: 5.5rem;
-            font-weight: 900;
-            background: linear-gradient(
-                135deg,
-                #ffffff,
-                #fff5fa,
-                #ffe6f0,
-                #ffd6e6,
-                #ffc6dc,
-                #ffb6d2,
-                #ffa6c8,
-                #ffb6d2,
-                #ffc6dc,
-                #ffd6e6,
-                #ffe6f0,
-                #fff5fa,
-                #ffffff
-            );
-            background-size: 300% 300%;
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            animation: titleShimmer 8s infinite;
-            text-shadow: 0 0 50px #ffb6c1, 0 0 100px #ff4d6d, 0 0 150px #ff8da1;
-            letter-spacing: 6px;
-            margin-bottom: 15px;
+        .header h1 {
+            font-size: 4rem;
+            color: #b13e5c;
+            text-shadow: 2px 2px 0 white, 4px 4px 0 rgba(255, 182, 193, 0.5);
+            letter-spacing: 4px;
+            font-weight: 400;
+            margin-bottom: 10px;
         }
 
-        @keyframes titleShimmer {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        .sub-title {
-            font-size: 2.2rem;
-            color: white;
-            text-shadow: 0 0 30px #ff4d6d, 0 0 60px #ffb6c1;
-            background: rgba(255, 255, 255, 0.2);
+        .header h2 {
+            font-size: 1.8rem;
+            color: #a53860;
+            font-style: italic;
+            text-shadow: 1px 1px 0 white;
+            border-top: 2px solid rgba(255, 255, 255, 0.6);
+            border-bottom: 2px solid rgba(255, 255, 255, 0.6);
             display: inline-block;
-            padding: 12px 50px;
-            border-radius: 80px;
-            backdrop-filter: blur(10px);
-            border: 3px solid white;
-            box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+            padding: 8px 30px;
+            letter-spacing: 2px;
         }
 
-        .title-decoration {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            margin-top: 15px;
-            font-size: 2rem;
-            filter: drop-shadow(0 0 20px #ff4d6d);
-        }
-
-        /* ========== 7. FOTO PREMIUM (FULL KELIATAN) ========== */
+        /* ========== 6. FOTO (FULL, TIDAK KETUTUPAN) ========== */
         .photo-section {
             display: flex;
             justify-content: center;
-            margin: 25px 0 45px;
+            margin: 30px 0 40px;
         }
 
-        .photo-multiframe {
-            position: relative;
-            width: 360px;
-            height: 360px;
-        }
-
-        .photo-frame-outer {
-            position: absolute;
-            top: -10px;
-            left: -10px;
-            right: -10px;
-            bottom: -10px;
-            border: 5px solid white;
-            border-radius: 50px;
-            box-shadow: 0 0 0 5px #ffb6c1, 0 0 0 10px #ff8da1;
-            animation: framePulse 4s infinite alternate;
-        }
-
-        @keyframes framePulse {
-            from { box-shadow: 0 0 0 5px #ffb6c1, 0 0 0 10px #ff8da1, 0 0 30px #ff4d6d; }
-            to { box-shadow: 0 0 0 8px #ffb6c1, 0 0 0 15px #ff8da1, 0 0 60px #ff4d6d; }
-        }
-
-        .photo-frame-main {
-            width: 100%;
-            height: 100%;
-            border-radius: 45px;
+        .photo-frame {
+            width: 340px;
+            height: 340px;
+            border-radius: 35px;  /* FULL KELIATAN, HANYA SEDIKIT LEMBUT */
             overflow: hidden;
             border: 8px solid white;
-            box-shadow: 0 30px 50px rgba(0, 0, 0, 0.5);
-            transition: all 0.6s cubic-bezier(0.2, 0.9, 0.4, 1.2);
-            position: relative;
-            z-index: 5;
+            box-shadow: 0 25px 40px rgba(255, 105, 180, 0.3),
+                        0 0 0 3px #ffb6c1,
+                        0 0 0 6px #ffe4ec;
+            transition: 0.5s ease;
         }
 
-        .photo-frame-main:hover {
-            transform: scale(1.07) rotate(2deg);
-            box-shadow: 0 40px 70px #ff4d6d;
+        .photo-frame:hover {
+            transform: scale(1.02);
+            box-shadow: 0 30px 50px #ff8da1,
+                        0 0 0 4px white,
+                        0 0 0 8px #ffb6c1;
         }
 
-        .photo-frame-main img {
+        .photo-frame img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.9s;
+            transition: 0.7s;
         }
 
-        .photo-frame-main:hover img {
-            transform: scale(1.15);
+        .photo-frame:hover img {
+            transform: scale(1.05);
         }
 
-        .photo-decoration {
-            position: absolute;
-            bottom: -20px;
-            right: -20px;
-            font-size: 3rem;
-            filter: drop-shadow(0 0 25px #ff4d6d);
-            z-index: 6;
-            animation: decoSpin 10s infinite linear;
-        }
-
-        @keyframes decoSpin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        /* ========== 8. MUSIC PLAYER SUPER MEWAH ========== */
+        /* ========== 7. MUSIC PLAYER ELEGAN ========== */
         .music-section {
-            background: linear-gradient(145deg, rgba(255, 255, 255, 0.25), rgba(255, 200, 220, 0.3));
-            backdrop-filter: blur(18px);
-            border-radius: 120px;
-            padding: 30px 35px;
-            margin: 30px 0 40px;
-            border: 4px solid white;
-            box-shadow: 0 20px 50px rgba(255, 0, 100, 0.4), 0 0 0 3px #ffb6c1 inset;
+            background: rgba(255, 250, 250, 0.5);
+            backdrop-filter: blur(8px);
+            border-radius: 80px;
+            padding: 25px 30px;
+            margin: 30px 0 35px;
+            border: 2px solid white;
+            box-shadow: 0 15px 30px rgba(255, 105, 180, 0.2);
         }
 
-        .music-title-main {
+        .music-title {
             text-align: center;
-            font-size: 2.3rem;
-            color: white;
-            text-shadow: 0 0 30px #ff4d6d, 0 0 60px #ffb6c1;
-            margin-bottom: 20px;
-            letter-spacing: 4px;
+            font-size: 2rem;
+            color: #b13e5c;
+            margin-bottom: 15px;
+            font-style: italic;
+            text-shadow: 1px 1px 0 white;
         }
 
-        .music-player-wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .music-player-wrapper audio {
+        .music-player audio {
             width: 100%;
-            max-width: 600px;
-            border-radius: 100px;
-            background: #ffd9e6;
-            border: 4px solid white;
+            border-radius: 60px;
+            background: #ffe4ec;
+            border: 2px solid white;
             outline: none;
-            box-shadow: 0 10px 30px rgba(255, 0, 100, 0.3);
         }
 
-        /* Custom styling untuk audio */
+        /* Custom audio styling */
         audio::-webkit-media-controls-panel {
-            background: #ffd9e6;
+            background: #ffe4ec;
         }
         audio::-webkit-media-controls-play-button {
-            background: #ff4d6d;
+            background: #ffb6c1;
             border-radius: 50%;
         }
-        audio::-webkit-media-controls-timeline {
-            background: #ffb6c1;
-            border-radius: 30px;
-            margin: 0 15px;
-        }
 
-        .music-visualizer {
-            display: flex;
-            justify-content: center;
-            gap: 8px;
-            margin-top: 20px;
-            height: 40px;
-        }
-
-        .visualizer-bar {
-            width: 8px;
-            height: 100%;
-            background: white;
-            border-radius: 10px;
-            animation: visualize 1.2s infinite alternate;
-        }
-
-        .visualizer-bar:nth-child(1) { animation-delay: 0s; background: #ffb6c1; }
-        .visualizer-bar:nth-child(2) { animation-delay: 0.2s; background: #ff8da1; }
-        .visualizer-bar:nth-child(3) { animation-delay: 0.4s; background: #ff4d6d; }
-        .visualizer-bar:nth-child(4) { animation-delay: 0.6s; background: #ff8da1; }
-        .visualizer-bar:nth-child(5) { animation-delay: 0.8s; background: #ffb6c1; }
-        .visualizer-bar:nth-child(6) { animation-delay: 1.0s; background: #ff4d6d; }
-        .visualizer-bar:nth-child(7) { animation-delay: 1.2s; background: #ff8da1; }
-
-        @keyframes visualize {
-            0% { height: 20%; }
-            100% { height: 100%; }
-        }
-
-        /* ========== 9. LONGTEXS PANJANG ========== */
+        /* ========== 8. LONGTEXS (PESAN PANJANG) ========== */
         .longtext-section {
-            background: rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(15px);
-            border-radius: 70px 70px 50px 50px;
-            padding: 50px 45px;
-            margin: 35px 0 40px;
-            border: 4px solid white;
-            max-height: 550px;
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(6px);
+            border-radius: 50px;
+            padding: 40px;
+            margin: 30px 0 35px;
+            border: 2px dashed #ffb6c1;
+            max-height: 480px;
             overflow-y: auto;
-            color: white;
-            text-shadow: 0 3px 10px black;
-            font-size: 1.35rem;
-            line-height: 2.1;
+            color: #581c37;
+            font-size: 1.2rem;
+            line-height: 2;
             scrollbar-width: thin;
-            scrollbar-color: #ff4d6d #ffb6c1;
-            box-shadow: 0 30px 70px rgba(255, 0, 100, 0.4), inset 0 0 50px rgba(255, 255, 255, 0.1);
+            scrollbar-color: #ff8da1 #ffe4ec;
+            box-shadow: inset 0 0 30px rgba(255, 255, 255, 0.5);
         }
 
         .longtext-section::-webkit-scrollbar {
-            width: 16px;
+            width: 10px;
         }
         .longtext-section::-webkit-scrollbar-track {
-            background: #ffb6c1;
-            border-radius: 40px;
-            border: 4px solid white;
+            background: #ffe4ec;
+            border-radius: 20px;
         }
         .longtext-section::-webkit-scrollbar-thumb {
-            background: #ff4d6d;
-            border-radius: 40px;
-            border: 4px solid white;
+            background: #ff8da1;
+            border-radius: 20px;
+            border: 2px solid white;
         }
 
         .longtext-section p {
-            margin-bottom: 35px;
+            margin-bottom: 25px;
             white-space: pre-line;
         }
 
@@ -567,386 +272,279 @@
             font-size: 4rem;
             float: left;
             margin-right: 15px;
-            color: #ffb6c1;
-            text-shadow: 0 0 30px #ff4d6d;
-            font-weight: bold;
+            color: #b13e5c;
+            font-family: 'Times New Roman', serif;
+            text-shadow: 2px 2px 0 white;
         }
 
-        /* ========== 10. DEKORASI TENGAH ========== */
-        .mid-decoration {
-            display: flex;
-            justify-content: center;
-            gap: 35px;
-            margin: 20px 0;
-            font-size: 2.2rem;
-            filter: drop-shadow(0 0 25px #ff4d6d);
-            flex-wrap: wrap;
-        }
-
-        .mid-decoration span {
-            background: rgba(255, 255, 255, 0.2);
-            width: 70px;
-            height: 70px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            border: 3px solid white;
-            backdrop-filter: blur(10px);
-            animation: midBounce 3s infinite;
-        }
-
-        @keyframes midBounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
-        }
-
-        .mid-decoration span:nth-child(2) { animation-delay: 0.2s; }
-        .mid-decoration span:nth-child(3) { animation-delay: 0.4s; }
-        .mid-decoration span:nth-child(4) { animation-delay: 0.6s; }
-        .mid-decoration span:nth-child(5) { animation-delay: 0.8s; }
-
-        /* ========== 11. QUOTE SECTION (HANYA DEKORASI) ========== */
-        .quote-section {
-            text-align: center;
-            font-size: 1.8rem;
-            color: white;
-            text-shadow: 0 0 30px #ff4d6d, 0 0 60px #ffb6c1;
-            margin: 25px 0;
-            font-style: italic;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 100px;
-            border: 3px dashed white;
-            backdrop-filter: blur(8px);
-        }
-
-        /* ========== 12. COUNTDOWN / TIMER (HANYA VISUAL) ========== */
-        .timer-section {
+        /* ========== 9. DEKORASI TENGAH (MINIMAL) ========== */
+        .mid-decor {
             display: flex;
             justify-content: center;
             gap: 30px;
-            margin: 30px 0;
+            margin: 20px 0;
+            font-size: 1.8rem;
+            color: #b13e5c;
+            opacity: 0.6;
+        }
+
+        .mid-decor span {
+            animation: gentleFloat 4s infinite alternate;
+            }
+
+        @keyframes gentleFloat {
+            from { transform: translateY(0); }
+            to { transform: translateY(-8px); }
+        }
+
+        .mid-decor span:nth-child(2) { animation-delay: 0.5s; }
+        .mid-decor span:nth-child(3) { animation-delay: 1s; }
+        .mid-decor span:nth-child(4) { animation-delay: 1.5s; }
+
+        /* ========== 10. QUOTE SIMPEL ========== */
+        .quote {
+            text-align: center;
+            font-size: 1.5rem;
+            color: #a53860;
+            font-style: italic;
+            margin: 25px 0;
+            text-shadow: 1px 1px 0 white;
+            border-left: 4px solid #ffb6c1;
+            border-right: 4px solid #ffb6c1;
+            padding: 10px 20px;
+            display: inline-block;
+            width: auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ========== 11. TIMER HALUS (TIDAK KEDIP) ========== */
+        .timer-section {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin: 30px 0 20px;
             flex-wrap: wrap;
         }
 
         .timer-box {
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(12px);
-            border: 3px solid white;
-            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(5px);
+            border-radius: 40px;
             padding: 15px 25px;
-            min-width: 120px;
+            min-width: 100px;
             text-align: center;
-            box-shadow: 0 15px 30px rgba(255, 0, 100, 0.3);
+            border: 2px solid white;
+            box-shadow: 0 8px 0 #ffb6c1;
         }
 
         .timer-number {
             font-size: 2.5rem;
             font-weight: bold;
-            color: white;
-            text-shadow: 0 0 30px #ff4d6d;
+            color: #b13e5c;
+            text-shadow: 2px 2px 0 white;
+            line-height: 1.2;
         }
 
         .timer-label {
-            font-size: 1.1rem;
-            color: white;
-            opacity: 0.9;
+            font-size: 1rem;
+            color: #a53860;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
-        /* ========== 13. FOOTER MEGA ========== */
-        .footer-section {
+        /* ========== 12. FOOTER ELEGAN ========== */
+        .footer {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 25px 15px 10px;
-            color: white;
-            font-size: 1.3rem;
-            text-shadow: 0 0 25px #ff4d6d;
-            flex-wrap: wrap;
-            gap: 20px;
-            border-top: 3px solid rgba(255, 255, 255, 0.5);
-            margin-top: 20px;
+            padding: 20px 10px 5px;
+            color: #a53860;
+            font-size: 1.2rem;
+            border-top: 2px solid rgba(255, 255, 255, 0.5);
+            margin-top: 25px;
         }
 
         .footer-left, .footer-right {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 12px 35px;
-            border-radius: 70px;
-            border: 3px solid white;
-            backdrop-filter: blur(8px);
+            background: rgba(255, 255, 255, 0.3);
+            padding: 8px 25px;
+            border-radius: 50px;
+            border: 2px solid white;
         }
 
         .footer-center {
             font-size: 2rem;
-            filter: drop-shadow(0 0 30px #ff4d6d);
+            opacity: 0.7;
         }
 
-        /* ========== 14. RESPONSIVE DESIGN ========== */
-        @media (max-width: 800px) {
-            .main-title { font-size: 3.8rem; }
-            .sub-title { font-size: 1.8rem; padding: 8px 30px; }
-            .photo-multiframe { width: 280px; height: 280px; }
-            .longtext-section { font-size: 1.1rem; padding: 30px 25px; }
-            .timer-box { min-width: 90px; padding: 10px 15px; }
+        /* ========== 13. RESPONSIVE ========== */
+        @media (max-width: 700px) {
+            .container { padding: 30px 20px; }
+            .header h1 { font-size: 3rem; }
+            .photo-frame { width: 260px; height: 260px; }
+            .longtext-section { font-size: 1.1rem; padding: 25px; }
             .timer-number { font-size: 2rem; }
+            .footer { flex-direction: column; gap: 15px; }
         }
 
-        @media (max-width: 500px) {
-            .main-title { font-size: 2.8rem; }
-            .photo-multiframe { width: 220px; height: 220px; }
-            .footer-section { flex-direction: column; text-align: center; }
-        }
-
-        /* ========== 15. ANIMASI TAMBAHAN ========== */
-        .floating {
-            animation: floating 4s infinite ease-in-out;
-        }
-
-        @keyframes floating {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-
-        .pulse {
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.7; }
-        }
-
-        .rotate-slow {
-            animation: rotateSlow 12s infinite linear;
-        }
-
-        @keyframes rotateSlow {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        /* ========== 16. EXTRA DECORATIONS ========== */
-        .extra-deco {
-            position: absolute;
+        /* ========== 14. EXTRA ELEGAN ========== */
+        .signature {
+            font-family: 'Brush Script MT', cursive;
             font-size: 2.5rem;
-            opacity: 0.2;
-            pointer-events: none;
-            z-index: 0;
+            color: #b13e5c;
+            text-align: right;
+            margin-top: 10px;
+            opacity: 0.7;
         }
 
-        .extra-deco-1 { top: 5%; left: 3%; }
-        .extra-deco-2 { bottom: 8%; right: 4%; }
-        .extra-deco-3 { top: 20%; right: 8%; }
-        .extra-deco-4 { bottom: 15%; left: 5%; }
+        /* ========== 15. BACKGROUND EXTRA (LEMBUT) ========== */
+        .bg-circle {
+            position: fixed;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, #ffd0dd, transparent);
+            border-radius: 50%;
+            filter: blur(70px);
+            z-index: -3;
+            animation: circleMove 30s infinite alternate;
+        }
+
+        @keyframes circleMove {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(200px, 200px) scale(1.2); }
+        }
     </style>
 </head>
 <body>
 
-    <!-- BACKGROUND LAYERS -->
-    <div class="bg-layer-1"></div>
-    <div class="bg-layer-2"></div>
-    <div class="bg-layer-3"></div>
+    <!-- BACKGROUND LEMBUT -->
+    <div class="bg-gradient"></div>
+    <div class="bg-overlay"></div>
+    <div class="bg-circle" style="top: 10%; left: 5%;"></div>
+    <div class="bg-circle" style="bottom: 10%; right: 5%; background: radial-gradient(circle, #ffb6c1, transparent);"></div>
 
-    <!-- GLOWING CIRCLES -->
-    <div class="glow-circle-1"></div>
-    <div class="glow-circle-2"></div>
-    <div class="glow-circle-3"></div>
+    <!-- PARTIKEL MINIMALIS (2 JENIS, LAMBAT) -->
+    <div class="particle-container" id="particle-container"></div>
 
-    <!-- PARTICLE FACTORY (DIISI JAVASCRIPT) -->
-    <div class="particle-factory" id="particle-factory"></div>
+    <!-- MAIN CONTAINER -->
+    <div class="container">
+        
+        <!-- HEADER -->
+        <div class="header">
+            <h1>indli</h1>
+            <h2>🕊️ untuk kamu 🕊️</h2>
+        </div>
 
-    <!-- DECORASI EXTRA (STATIC) -->
-    <div class="extra-deco extra-deco-1">💮</div>
-    <div class="extra-deco extra-deco-2">🌸</div>
-    <div class="extra-deco extra-deco-3">🌼</div>
-    <div class="extra-deco extra-deco-4">🌺</div>
+        <!-- FOTO FULL -->
+        <div class="photo-section">
+            <div class="photo-frame">
+                <img src="kita.jpeg" alt="kita" onerror="this.src='https://placehold.co/400/ffb6c1/ffffff?text=kita'">
+            </div>
+        </div>
 
-    <!-- MAIN WRAPPER -->
-    <div class="main-wrapper">
-        <div class="container-outer">
-            <div class="container-inner">
+        <!-- MUSIC PLAYER -->
+        <div class="music-section">
+            <div class="music-title">about you.mp3</div>
+            <div class="music-player">
+                <audio controls autoplay loop>
+                    <source src="about you.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
 
-                <!-- HEADER SECTION -->
-                <div class="header-section">
-                    <div class="main-title">💗 i n d l i 💗</div>
-                    <div class="sub-title">🫶 untuk kamu yang paling spesial 🫶</div>
-                    <div class="title-decoration">
-                        <span>💕</span>
-                        <span>💖</span>
-                        <span>💗</span>
-                        <span>💓</span>
-                    </div>
-                </div>
-
-                <!-- PHOTO SECTION (FULL KELIATAN) -->
-                <div class="photo-section">
-                    <div class="photo-multiframe">
-                        <div class="photo-frame-outer"></div>
-                        <div class="photo-frame-main">
-                            <img src="kita.jpeg" alt="kita berdua" onerror="this.src='https://placehold.co/500/ffb6c1/ffffff?text=kita'">
-                        </div>
-                        <div class="photo-decoration">✨</div>
-                    </div>
-                </div>
-
-                <!-- MUSIC SECTION -->
-                <div class="music-section">
-                    <div class="music-title-main">🎵 about you.mp3 🎵</div>
-                    <div class="music-player-wrapper">
-                        <audio controls autoplay loop>
-                            <source src="about you.mp3" type="audio/mpeg">
-                            <source src="about you.mp3" type="audio/mp3">
-                            browser tidak mendukung audio
-                        </audio>
-                        <div class="music-visualizer">
-                            <div class="visualizer-bar"></div>
-                            <div class="visualizer-bar"></div>
-                            <div class="visualizer-bar"></div>
-                            <div class="visualizer-bar"></div>
-                            <div class="visualizer-bar"></div>
-                            <div class="visualizer-bar"></div>
-                            <div class="visualizer-bar"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- LONGTEXS SECTION (PESAN PANJANG PERSIS DARI LU) -->
-                <div class="longtext-section">
-                    <p>
+        <!-- LONGTEXS (PERSIS DARI LU) -->
+        <div class="longtext-section">
+            <p>
 aku cuma mau bilang makasiiii banyakkkkk indliiiiiiikuuu, bukan cuma buat hal² besar yang keliatan, tapi juga buat semua hal kecil yang mungkin orang lain ga sadar, tapi aku ngerasain banget. makasiii udah sabar sama aku sejauh ini. sabar waktu aku lagi nyebelin, lagi banyak pikiran, atau lagi ga jadi versi terbaik dari diri aku sendiri. kamu tetep milih buat stay, bukan cuma pas gampangnya doang, tapi juga pas ribetnya. aku juga bersyukur banget kamu mau jadi bagian dari hidup aku. dari sekian banyak kemungkinan, kamu yang sekarang ada di samping aku, nemenin hari² aku, dengerin cerita aku, dan pelan pelan jadi partner hidup yang selalu aku harapin. aku tau aku belum sempurna, masih banyak kurangnya, tapi aku bakal terus belajar buat jadi seseorang yang pantes buat kamu perjuangin juga. intinya… makasih ya udah mau sampai di titik ini bareng aku. semoga kita bisa terus jalan, ga harus selalu mulus, tapi selalu bareng.
-                    </p>
-                </div>
+            </p>
+        </div>
 
-                <!-- MID DECORATION (EMOJI SECUKUPNYA) -->
-                <div class="mid-decoration">
-                    <span>💕</span>
-                    <span>💖</span>
-                    <span>💗</span>
-                    <span>💓</span>
-                    <span>💞</span>
-                </div>
+        <!-- DEKORASI TENGAH (EMOJI SECUKUPNYA) -->
+        <div class="mid-decor">
+            <span>💗</span>
+            <span>💖</span>
+            <span>💓</span>
+            <span>💕</span>
+        </div>
 
-                <!-- QUOTE SECTION (HANYA DEKORASI) -->
-                <div class="quote-section">
-                    ❝ from me, for you, forever ❞
-                </div>
+        <!-- QUOTE SIMPEL -->
+        <div class="quote">
+            ❝ from me, to you ❞
+        </div>
 
-                <!-- TIMER SECTION (HANYA VISUAL, DIISI JS) -->
-                <div class="timer-section">
-                    <div class="timer-box">
-                        <div class="timer-number" id="days">00</div>
-                        <div class="timer-label">hari</div>
-                    </div>
-                    <div class="timer-box">
-                        <div class="timer-number" id="hours">00</div>
-                        <div class="timer-label">jam</div>
-                    </div>
-                    <div class="timer-box">
-                        <div class="timer-number" id="minutes">00</div>
-                        <div class="timer-label">menit</div>
-                    </div>
-                    <div class="timer-box">
-                        <div class="timer-number" id="seconds">00</div>
-                        <div class="timer-label">detik</div>
-                    </div>
-                </div>
+        <!-- TIMER HALUS -->
+        <div class="timer-section">
+            <div class="timer-box">
+                <div class="timer-number" id="days">00</div>
+                <div class="timer-label">hari</div>
+            </div>
+            <div class="timer-box">
+                <div class="timer-number" id="hours">00</div>
+                <div class="timer-label">jam</div>
+            </div>
+            <div class="timer-box">
+                <div class="timer-number" id="minutes">00</div>
+                <div class="timer-label">menit</div>
+            </div>
+            <div class="timer-box">
+                <div class="timer-number" id="seconds">00</div>
+                <div class="timer-label">detik</div>
+            </div>
+        </div>
 
-                <!-- FOOTER SECTION -->
-                <div class="footer-section">
-                    <div class="footer-left" id="tanggal"></div>
-                    <div class="footer-center">💘</div>
-                    <div class="footer-right">dari aku</div>
-                </div>
+        <!-- SIGNATURE (DEKORATIF) -->
+        <div class="signature">dari aku</div>
 
-            </div> <!-- end container-inner -->
-        </div> <!-- end container-outer -->
-    </div> <!-- end main-wrapper -->
+        <!-- FOOTER -->
+        <div class="footer">
+            <div class="footer-left" id="tanggal"></div>
+            <div class="footer-center">💘</div>
+            <div class="footer-right">selamanya</div>
+        </div>
 
-    <!-- JAVASCRIPT SUPER LENGKAP (ANIMASI + LOGIC) -->
+    </div>
+
+    <!-- JAVASCRIPT (ANIMASI LEMBUT, TIDAK KEDIP) -->
     <script>
         (function() {
-            // ========== 1. KONTAINER PARTIKEL ==========
-            const particleFactory = document.getElementById('particle-factory');
+            const particleContainer = document.getElementById('particle-container');
 
-            // ========== 2. FUNGSI MEMBUAT PARTIKEL TIPE 1 (BINTANG) ==========
-            function createStarParticle() {
+            // FUNGSI MEMBUAT HATI (LAMBAT)
+            function createHeart() {
+                const heart = document.createElement('div');
+                heart.className = 'particle-heart';
+                const hearts = ['❤️', '💖', '💗', '💓', '💕', '🩷'];
+                heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+                heart.style.left = Math.random() * 100 + '%';
+                heart.style.animationDuration = (Math.random() * 10 + 15) + 's'; // 15-25 detik
+                heart.style.fontSize = (Math.random() * 20 + 18) + 'px';
+                particleContainer.appendChild(heart);
+                setTimeout(() => heart.remove(), 25000);
+            }
+
+            // FUNGSI MEMBUAT BINTANG (LAMBAT)
+            function createStar() {
                 const star = document.createElement('div');
                 star.className = 'particle-star';
                 star.style.left = Math.random() * 100 + '%';
-                star.style.animationDuration = (Math.random() * 6 + 4) + 's';
-                star.style.background = `hsl(${Math.random() * 20 + 340}, 100%, 70%)`;
-                star.style.width = (Math.random() * 8 + 2) + 'px';
+                star.style.animationDuration = (Math.random() * 12 + 18) + 's'; // 18-30 detik
+                star.style.width = (Math.random() * 6 + 2) + 'px';
                 star.style.height = star.style.width;
-                particleFactory.appendChild(star);
-                setTimeout(() => star.remove(), 10000);
+                particleContainer.appendChild(star);
+                setTimeout(() => star.remove(), 30000);
             }
 
-            // ========== 3. FUNGSI MEMBUAT PARTIKEL TIPE 2 (HATI) ==========
-            function createHeartParticle() {
-                const heart = document.createElement('div');
-                heart.className = 'particle-heart';
-                const hearts = ['❤️', '💖', '💗', '💓', '💕', '💞', '🩷', '💘', '💝'];
-                heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
-                heart.style.left = Math.random() * 100 + '%';
-                heart.style.animationDuration = (Math.random() * 8 + 5) + 's';
-                heart.style.fontSize = (Math.random() * 30 + 18) + 'px';
-                particleFactory.appendChild(heart);
-                setTimeout(() => heart.remove(), 13000);
-            }
+            // INTERVAL LAMBAT (TIDAK MEMBANJIRI)
+            setInterval(createHeart, 800);
+            setInterval(createStar, 600);
 
-            // ========== 4. FUNGSI MEMBUAT PARTIKEL TIPE 3 (BINTANG BESAR) ==========
-            function createBigStarParticle() {
-                const bigstar = document.createElement('div');
-                bigstar.className = 'particle-bigstar';
-                bigstar.innerHTML = '⭐';
-                bigstar.style.left = Math.random() * 100 + '%';
-                bigstar.style.animationDuration = (Math.random() * 9 + 6) + 's';
-                bigstar.style.fontSize = (Math.random() * 25 + 20) + 'px';
-                particleFactory.appendChild(bigstar);
-                setTimeout(() => bigstar.remove(), 15000);
-            }
-
-            // ========== 5. FUNGSI MEMBUAT PARTIKEL TIPE 4 (KELOPAK) ==========
-            function createPetalParticle() {
-                const petal = document.createElement('div');
-                petal.className = 'particle-petal';
-                const petals = ['🌸', '🌼', '🌺', '🪷', '🌷'];
-                petal.innerHTML = petals[Math.floor(Math.random() * petals.length)];
-                petal.style.left = Math.random() * 100 + '%';
-                petal.style.animationDuration = (Math.random() * 10 + 6) + 's';
-                petal.style.fontSize = (Math.random() * 25 + 18) + 'px';
-                particleFactory.appendChild(petal);
-                setTimeout(() => petal.remove(), 16000);
-            }
-
-            // ========== 6. FUNGSI MEMBUAT PARTIKEL TIPE 5 (GELEMBUNG) ==========
-            function createBubbleParticle() {
-                const bubble = document.createElement('div');
-                bubble.className = 'particle-bubble';
-                bubble.style.left = Math.random() * 100 + '%';
-                bubble.style.animationDuration = (Math.random() * 7 + 4) + 's';
-                bubble.style.width = (Math.random() * 15 + 8) + 'px';
-                bubble.style.height = bubble.style.width;
-                particleFactory.appendChild(bubble);
-                setTimeout(() => bubble.remove(), 11000);
-            }
-
-            // ========== 7. JALANKAN SEMUA INTERVAL PARTIKEL ==========
-            setInterval(createStarParticle, 200);
-            setInterval(createHeartParticle, 250);
-            setInterval(createBigStarParticle, 400);
-            setInterval(createPetalParticle, 350);
-            setInterval(createBubbleParticle, 300);
-
-            // ========== 8. SET TANGGAL DI FOOTER ==========
+            // SET TANGGAL
             const today = new Date();
             const options = { day: 'numeric', month: 'long', year: 'numeric' };
-            document.getElementById('tanggal').innerText = '📅 ' + today.toLocaleDateString('id-ID', options);
+            document.getElementById('tanggal').innerText = today.toLocaleDateString('id-ID', options);
 
-            // ========== 9. TIMER COUNTDOWN (HITUNG MUNDUR KE TANGGAL SPESIAL) ==========
-            // GANTI TANGGAL INI SESUAI HARI JADIAN / MOMEN SPESIAL LU
-            const targetDate = new Date('2026-12-31T23:59:59'); // contoh, ganti sesuai keinginan
+            // TIMER COUNTDOWN (GANTI TANGGAL SESUAI MOMEN)
+            const targetDate = new Date('2026-12-31T23:59:59'); // GANTI
 
             function updateTimer() {
                 const now = new Date();
@@ -974,65 +572,37 @@ aku cuma mau bilang makasiiii banyakkkkk indliiiiiiikuuu, bukan cuma buat hal² 
             updateTimer();
             setInterval(updateTimer, 1000);
 
-            // ========== 10. EFEK KLIK PADA FOTO ==========
-            const photo = document.querySelector('.photo-frame-main');
-            photo.addEventListener('click', function() {
-                this.style.transform = 'scale(0.95) rotate(-1deg)';
-                setTimeout(() => {
-                    this.style.transform = '';
-                }, 200);
+            // EFEK HALUS PADA FOTO
+            const photo = document.querySelector('.photo-frame');
+            photo.addEventListener('click', () => {
+                photo.style.transform = 'scale(0.98)';
+                setTimeout(() => photo.style.transform = '', 200);
             });
 
-            // ========== 11. EFEK HALUS LAINNYA ==========
-            console.log('💗 website untuk indli siap, total animasi 5 tipe partikel, timer, dan banyak efek 💗');
-
-            // ========== 12. RANDOM MINI CONFETTI SAAT LOAD (SEDERHANA) ==========
-            for (let i = 0; i < 20; i++) {
-                setTimeout(() => {
-                    createHeartParticle();
-                    createStarParticle();
-                }, i * 100);
-            }
+            console.log('Edisi elegan, nggak kedip-kedip!');
         })();
     </script>
 
-    <!-- EXTRA STYLE UNTUK MEMASTIKAN SEMUANYA KEREN -->
+    <!-- EXTRA STYLE UNTUK MEMASTIKAN TIDAK KEDIP -->
     <style>
-        /* MEMASTIKAN FOTO TIDAK KEPOTONG */
-        .photo-frame-main {
-            position: relative;
-            z-index: 20;
+        /* PASTIKAN SEMUA ANIMASI LAMBAT */
+        .particle-heart, .particle-star {
+            will-change: transform, opacity;
         }
 
-        /* EFEK EXTRA UNTUK BACKGROUND */
-        body::after {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: repeating-radial-gradient(circle at 30% 40%, rgba(255, 255, 255, 0.05) 0px, transparent 20px);
-            pointer-events: none;
-            z-index: -5;
-        }
-
-        /* STYLING UNTUK TIMER */
-        .timer-box {
-            transition: 0.3s;
-        }
-        .timer-box:hover {
-            transform: scale(1.05);
-            box-shadow: 0 20px 40px #ff4d6d;
-        }
-
-        /* GARANSI TIDAK ADA YANG ERROR */
+        /* HILANGKAN FLICKER PADA AUDIO */
         audio {
-            outline: none;
+            transition: none;
+        }
+
+        /* BACKGROUND TIDAK BERGETAR */
+        .bg-gradient {
+            animation-timing-function: ease-in-out;
         }
     </style>
 
-    <!-- FALLBACK UNTUK FOTO JIKA TIDAK ADA -->
-    <!-- TAPI HARAPANNYA FOTO KITA.JPEG ADA -->
+    <!-- TAMBAHAN DEKORASI (TEXTURE HALUS) -->
+    <div style="position: fixed; top:0; left:0; width:100%; height:100%; background: repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 30px, transparent 30px, transparent 60px); pointer-events: none; z-index: -1;"></div>
+
 </body>
 </html>
